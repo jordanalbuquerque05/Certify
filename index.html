@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-provider="aws">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Certify — Plataforma de estudos interativa para certificações AWS (CLF-C02, SAA-C03, AIF-C01) e Oracle OCI. Progresso persistente, flashcards e timer Pomodoro integrados." />
+  <meta name="theme-color" content="#FF9900" />
+  <title>Certify — Cloud Certification Platform</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/main.css?v=2.1" />
+  <link rel="stylesheet" href="css/aws-theme.css?v=2.1" />
+  <link rel="stylesheet" href="css/oracle-theme.css?v=2.1" />
+
+  <style>
+    /* ── Inline critical styles ── */
+    .splash {
+      position: fixed; inset: 0;
+      background: #030303;
+      display: flex; align-items: center; justify-content: center;
+      flex-direction: column; gap: 20px;
+      z-index: 999;
+      transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.6s ease;
+    }
+    .splash.hidden { opacity: 0; visibility: hidden; }
+    .splash-logo {
+      font-family: 'Outfit', sans-serif;
+      font-size: 3rem; font-weight: 700;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .splash-icon {
+      width: 48px; height: 48px;
+      background: linear-gradient(135deg, #FF9900, #FFB84D);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 24px;
+      box-shadow: 0 8px 24px rgba(255,153,0,0.3);
+    }
+    .splash-sub { font-size: 0.95rem; color: #a1a1aa; font-family: 'Inter', sans-serif; }
+    
+    .spinner {
+      width: 24px; height: 24px;
+      border: 3px solid rgba(255,153,0,0.2);
+      border-top-color: #FF9900;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+  </style>
+</head>
+<body>
+  <!-- Splash screen -->
+  <div class="splash" id="splash">
+    <div class="splash-logo">
+      <div class="splash-icon">📚</div>
+      Certify
+    </div>
+    <div class="spinner"></div>
+    <div class="splash-sub">Carregando ambiente...</div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Navegação principal">
+    <a href="#" class="nav-brand" id="nav-brand-link" onclick="App.navigate('home'); return false;" title="Ir para home">
+      <div class="icon">📚</div>
+      <span>Certify</span>
+      <span class="logo-badge">BETA</span>
+    </a>
+
+    <div class="navbar-spacer"></div>
+    
+    <div id="breadcrumb" class="breadcrumb" aria-label="Localização atual" role="navigation"></div>
+
+    <div class="navbar-spacer"></div>
+
+    <div class="nav-actions">
+      <!-- Provider toggle -->
+      <div class="provider-toggle" role="group" aria-label="Selecionar provider cloud">
+        <button class="provider-btn aws active" data-prov="aws" id="btn-aws" aria-pressed="true" title="Trilhas AWS">
+          ☁️ AWS
+        </button>
+        <button class="provider-btn oracle" data-prov="oracle" id="btn-oracle" aria-pressed="false" title="Trilhas Oracle OCI">
+          🔴 Oracle
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main app container -->
+  <main id="app" class="main-content" role="main" aria-live="polite">
+    <!-- Populated by app.js -->
+  </main>
+
+  <!-- Footer -->
+  <footer style="border-top: 1px solid var(--border); padding: 24px; text-align: center; color: var(--text-muted); font-size: 0.8rem; margin-top: auto;">
+    <p>Certify &copy; 2026 &mdash; Plataforma Premium de Estudos Cloud. Desenvolvido para máxima retenção.</p>
+  </footer>
+
+  <!-- JS modules (ordem importa) -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="js/data.js?v=2.1"></script>
+  <script src="js/content-bundle.js?v=2.1"></script>
+  <script src="js/progress.js?v=2.1"></script>
+  <script src="js/flashcards.js?v=2.1"></script>
+  <script src="js/pomodoro.js?v=2.1"></script>
+  <script src="js/app.js?v=2.1"></script>
+
+  <script>
+    // Hide splash after app loads
+    window.addEventListener('DOMContentLoaded', () => {
+      setTimeout(() => {
+        const splash = document.getElementById('splash');
+        if (splash) splash.classList.add('hidden');
+        setTimeout(() => splash && splash.remove(), 600);
+      }, 800);
+    });
+  </script>
+</body>
+</html>

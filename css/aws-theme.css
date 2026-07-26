@@ -1,0 +1,76 @@
+/* ============================================================
+   aws-theme.css — Identidade visual AWS Premium
+   ============================================================ */
+
+[data-provider="aws"] {
+  /* Theme Base */
+  --accent: #FF9900;
+  --accent-light: #FFB84D;
+  --accent-dim: rgba(255, 153, 0, 0.1);
+  --accent-border: rgba(255, 153, 0, 0.2);
+  --accent-glow: rgba(255, 153, 0, 0.15);
+  
+  /* Selection */
+  ::selection {
+    background: var(--accent-dim);
+    color: var(--accent-light);
+  }
+}
+
+/* ── AWS Specific Overrides ── */
+
+[data-provider="aws"] .provider-btn.aws.active {
+  background: linear-gradient(135deg, #FF9900 0%, #FFB84D 100%);
+  box-shadow: 0 4px 16px rgba(255, 153, 0, 0.3);
+  color: #000;
+  border-color: transparent;
+}
+
+[data-provider="aws"] .ambient-glow {
+  background: radial-gradient(circle, rgba(255, 153, 0, 0.15) 0%, transparent 60%);
+}
+
+[data-provider="aws"] .cert-card::before {
+  background: radial-gradient(800px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255, 153, 0, 0.15), transparent 40%);
+}
+
+[data-provider="aws"] .hero-title .highlight {
+  background: linear-gradient(135deg, #FF9900 0%, #FFB84D 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+[data-provider="aws"] .progress-fill {
+  background: linear-gradient(90deg, #FF9900, #FFB84D);
+  box-shadow: 0 0 12px rgba(255, 153, 0, 0.4);
+}
+
+[data-provider="aws"] .module-item.done {
+  border-color: rgba(255, 153, 0, 0.2);
+  background: rgba(255, 153, 0, 0.02);
+}
+
+[data-provider="aws"] .module-item.done::before {
+  background: var(--accent);
+}
+
+[data-provider="aws"] .module-item.done .mod-check {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #000;
+  box-shadow: 0 0 12px rgba(255, 153, 0, 0.3);
+}
+
+[data-provider="aws"] .cert-icon-wrapper {
+  color: var(--accent-light);
+}
+
+[data-provider="aws"] .cert-hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 200px;
+  background: linear-gradient(180deg, rgba(255, 153, 0, 0.05) 0%, transparent 100%);
+  pointer-events: none;
+}

@@ -1,0 +1,30 @@
+# Gabarito D2
+1-A
+2-A
+3-B
+4-B
+5-B
+6-A
+7-B
+8-A
+9-B
+10-B
+---
+
+Creditos autorais:
+- Thiago Cardoso - https://www.linkedin.com/in/analyticsthiagocardoso
+- Pedro Albertini - https://www.linkedin.com/in/pedroalbertini/
+- Lucas Garcia - https://www.linkedin.com/in/lucas-del-puerto/
+
+---
+
+## ☁️ Acompanhe a CloudStudy
+
+Estamos construindo uma plataforma para ajudar brasileiros a estudarem AWS de forma mais prática, organizada e acessível.
+
+Siga a CloudStudy para acompanhar novos materiais, atualizações e conteúdos sobre certificações AWS:
+
+- Instagram: https://www.instagram.com/cloudstudy.ai/
+- LinkedIn: https://www.linkedin.com/company/cloudstudy-ai/
+
+---

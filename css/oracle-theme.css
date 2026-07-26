@@ -1,0 +1,124 @@
+/* ============================================================
+   oracle-theme.css — Identidade visual Oracle OCI
+   ============================================================ */
+
+[data-provider="oracle"] {
+  --bg:         #080810;
+  --bg2:        #10101A;
+  --bg3:        #18182A;
+  --surface:    #1e1e30;
+  --border:     rgba(199,70,52,0.22);
+  --border2:    rgba(199,70,52,0.09);
+  --accent:     #C74634;
+  --accent2:    #E8523F;
+  --accent3:    #F07060;
+  --text:       #f0eff8;
+  --text2:      #9898b0;
+  --text3:      #505068;
+}
+
+[data-provider="oracle"] .provider-btn.oracle.active {
+  background: #C74634;
+  color: #fff;
+  box-shadow: 0 2px 16px rgba(199,70,52,0.45);
+}
+
+[data-provider="oracle"] .hero::before {
+  background: radial-gradient(ellipse 70% 50% at 50% 0%, rgba(199,70,52,0.14), transparent),
+              radial-gradient(ellipse 40% 60% at 80% 20%, rgba(100,60,180,0.08), transparent);
+}
+
+[data-provider="oracle"] .cert-detail-header::before {
+  background: radial-gradient(ellipse at right, rgba(199,70,52,0.10), transparent);
+}
+
+[data-provider="oracle"] .navbar {
+  background: rgba(8,8,16,0.90);
+  border-bottom-color: rgba(199,70,52,0.10);
+}
+
+[data-provider="oracle"] .nav-brand .logo-badge {
+  background: #C74634;
+  color: #fff;
+}
+
+[data-provider="oracle"] .cert-badge {
+  background: rgba(199,70,52,0.14);
+  color: #E8523F;
+  border-color: rgba(199,70,52,0.24);
+}
+
+[data-provider="oracle"] .cert-badge.oracle {
+  background: rgba(199,70,52,0.14);
+  color: #E8523F;
+  border-color: rgba(199,70,52,0.24);
+}
+
+[data-provider="oracle"] .week-tab.active {
+  background: #C74634;
+  color: #fff;
+  box-shadow: 0 2px 12px rgba(199,70,52,0.35);
+}
+
+[data-provider="oracle"] .btn-primary {
+  background: #C74634;
+  color: #fff;
+}
+[data-provider="oracle"] .btn-primary:hover {
+  background: #E8523F;
+  box-shadow: 0 4px 20px rgba(199,70,52,0.4);
+}
+
+[data-provider="oracle"] .tab-btn.active {
+  color: #C74634;
+  border-bottom-color: #C74634;
+}
+
+[data-provider="oracle"] .section-title::before {
+  background: linear-gradient(to bottom, #C74634, #E8523F);
+}
+
+[data-provider="oracle"] .progress-fill {
+  background: linear-gradient(90deg, #C74634, #E8523F);
+}
+
+[data-provider="oracle"] .pom-main-btn {
+  background: #C74634;
+  color: #fff;
+}
+[data-provider="oracle"] .pom-main-btn:hover {
+  background: #E8523F;
+}
+
+[data-provider="oracle"] .next-session-card {
+  border-color: rgba(199,70,52,0.22);
+}
+[data-provider="oracle"] .next-session-label {
+  color: #E8523F;
+}
+
+[data-provider="oracle"] .overall-progress::before {
+  background: linear-gradient(to bottom, #C74634, #E8523F);
+}
+
+[data-provider="oracle"] .card::after {
+  background: linear-gradient(135deg, rgba(199,70,52,0.05), transparent);
+}
+
+[data-provider="oracle"] .fc-label { color: #E8523F; }
+[data-provider="oracle"] .fc-progress-fill { background: #C74634; }
+
+/* Oracle purple ambient glow */
+[data-provider="oracle"] body::before {
+  content: '';
+  position: fixed; bottom: 0; left: 50%; transform: translateX(-50%);
+  width: 60vw; height: 40vh;
+  background: radial-gradient(ellipse at bottom, rgba(80,40,160,0.06), transparent);
+  pointer-events: none; z-index: 0;
+}
+
+[data-provider="oracle"] .week-badge {
+  color: #E8523F;
+  background: rgba(199,70,52,0.10);
+  border-color: rgba(199,70,52,0.20);
+}
